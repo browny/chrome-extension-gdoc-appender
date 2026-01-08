@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Append to Google Doc</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Append to Google Doc</h1>
+
+    <div id="auth-section">
+      <p id="auth-status" class="status">Not signed in</p>
+      <button id="auth-btn" class="btn btn-primary">Sign in with Google</button>
+    </div>
+
+    <div id="config-section">
+      <label for="doc-url">Google Doc URL:</label>
+      <input type="text" id="doc-url" placeholder="https://docs.google.com/document/d/..." />
+      <button id="save-btn" class="btn">Save</button>
+      <p id="save-status" class="status"></p>
+    </div>
+
+    <div id="doc-info" class="hidden">
+      <p>Configured Document ID:</p>
+      <code id="doc-id-display"></code>
+    </div>
+
+    <div class="instructions">
+      <p><strong>How to use:</strong></p>
+      <ol>
+        <li>Sign in with Google</li>
+        <li>Paste your Google Doc URL above</li>
+        <li>Select text on any webpage</li>
+        <li>Right-click → "Append to Google Doc"</li>
+      </ol>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
